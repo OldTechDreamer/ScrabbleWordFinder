@@ -32,17 +32,28 @@ Running Example
 ---------------
 
 Enter the letters in your hand > ntypho
+
 Enter a board letter (Enter to skip) > y
+
 Start range of letter possistion in word: 2
+
 End range of letter possistion in word (Enter for the same as start):
+
 Enter a board letter (Enter to skip) >
 
 NY
+
 OY
+
 HYP
+
 HYPO
+
 PYOT
+
 TYPO
+
 PYTHON
+
 TYPHON
 
