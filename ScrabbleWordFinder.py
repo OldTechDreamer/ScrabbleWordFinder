@@ -146,14 +146,14 @@ class WordFinder():
                 
 
     def CLISearch(self):    # Use the CLI to Search for words
-        hand = raw_input("Enter the letters in your hand >  ")  # Get hand letters
+        hand = input("Enter the letters in your hand >  ")  # Get hand letters
         hand = self.ListString(hand.strip())                    # Remove Spaces and seperate into a list
 
         index = 0
         board = []
 
         while True:     # Get board letters
-            board_letter = raw_input("Enter a board letter (Enter to skip) > ")
+            board_letter = input("Enter a board letter (Enter to skip) > ")
 
             if board_letter == "":
                 break
