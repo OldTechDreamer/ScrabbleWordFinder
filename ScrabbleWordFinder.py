@@ -1,4 +1,7 @@
+import sys
+
 class WordFinder():
+
     def __init__(self):
         self.words_path = "words.txt"   # Path to words file - a file containing every word seperated by a new line
         self.words = []                 # A list of all words
@@ -146,27 +149,34 @@ class WordFinder():
                 
 
     def CLISearch(self):    # Use the CLI to Search for words
-        hand = raw_input("Enter the letters in your hand >  ")  # Get hand letters
+
+        if sys.version_info[0] < 3:
+            input_func = raw_input
+        else:
+            input_func = input
+
+        hand = input_func("Enter the letters in your hand >  ")  # Get hand letters
+
         hand = self.ListString(hand.strip())                    # Remove Spaces and seperate into a list
 
         index = 0
         board = []
 
         while True:     # Get board letters
-            board_letter = raw_input("Enter a board letter (Enter to skip) > ")
+            board_letter = input_func("Enter a board letter (Enter to skip) > ")
 
             if board_letter == "":
                 break
 
             try:
-                start_range = input("Start range of letter possistion in word: ") - 1
+                start_range = input_func("Start range of letter possistion in word: ") - 1
 
             except:
                 print("Error no number.")
                 continue
 
             try:
-                end_range = input("End range of letter possistion in word (Enter for the same as start): ") - 1
+                end_range = input_func("End range of letter possistion in word (Enter for the same as start): ") - 1
 
             except:
                 end_range = start_range
